@@ -30,7 +30,7 @@ function handleWheel(event) {
 }
 
 // Add wheel event listener to the window
-window.addEventListener('scroll', handleWheel);
+window.addEventListener('wheel', handleWheel);
 
 // Simulate initial scroll value between 3 and 1000
 window.addEventListener('load', () => {
@@ -38,7 +38,7 @@ window.addEventListener('load', () => {
     const initialScroll = Math.floor(Math.random() * (100000000000000 - 99999999999 + 1));
     
     // Create a new WheelEvent with the random deltaY
-    const initialEvent = new WheelEvent('scroll', {
+    const initialEvent = new WheelEvent('wheel', {
         deltaY: initialScroll
     });
 
@@ -46,26 +46,31 @@ window.addEventListener('load', () => {
     window.dispatchEvent(initialEvent);
 });
 
-// Function to handle touch move event
+// Function to handle touchmove event
 function handleTouchMove(event) {
-    // Prevent default touch behavior
+    // Prevent default touch behavior (like scrolling)
     event.preventDefault();
     
     // Calculate the amount of rotation based on touch movement
-    const touchDelta = event.touches[0].clientY - startY;
-    rotationAngle += touchDelta * rotationSpeed;
+    const touch = event.touches[0];
+    const deltaY = touch.pageY - startY;
+    const rotationSpeed = 0.2; // Adjust rotation speed as needed
+    rotationAngle += deltaY * rotationSpeed;
+    
     // Update rotation
     updateRotation();
 }
 
 let startY;
 
-// Add touch events listeners to the window
-window.addEventListener('touchstart', (event) => {
+// Function to handle touchstart event
+function handleTouchStart(event) {
     // Store the initial touch position
-    startY = event.touches[0].clientY;
-});
+    startY = event.touches[0].pageY;
+}
 
+// Add touch event listeners to the window
+window.addEventListener('touchstart', handleTouchStart);
 window.addEventListener('touchmove', handleTouchMove);
 
 
