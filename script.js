@@ -46,6 +46,25 @@ window.addEventListener('load', () => {
     window.dispatchEvent(initialEvent);
 });
 
+// Function to handle touch move event
+function handleTouchMove(event) {
+    // Calculate the amount of rotation based on touch movement
+    const touchDelta = event.touches[0].clientY - startY;
+    rotationAngle += touchDelta * rotationSpeed;
+    // Update rotation
+    updateRotation();
+}
+
+let startY;
+
+// Add touch events listeners to the window
+window.addEventListener('touchstart', (event) => {
+    // Store the initial touch position
+    startY = event.touches[0].clientY;
+});
+
+window.addEventListener('touchmove', handleTouchMove);
+
 
 // // Function to check if the user is on a mobile device
 // function isMobileDevice() {
