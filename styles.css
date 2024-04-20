@@ -1,0 +1,192 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    overflow: hidden;
+}
+
+#pagebody{
+    overflow: scroll;
+}
+.circle-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    height: 50px;
+    width: 50px;
+    transform: translate(-106%, -100%);
+}
+
+.tbt{
+    left: 50%;
+}
+.text {
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+}
+
+.center-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(0%, -15%);
+    font-size: 18px;
+    font-weight: normal;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    opacity: 1; /* Initially hide */
+}
+
+.centerstick{
+    background-color: white;
+    width: 100px;
+    height: 100px;
+    border-radius: 50px;
+}
+
+#shop{
+    font-family: "Apple chancery", Cursive;
+/*    font-size: 23px;*/
+    font-weight: bold;
+}
+
+#info{
+    font-family: Arial, sans-serif;
+    font-size: 17px;
+}
+
+#archive{
+    font-family: "Papyrus", Fantasy;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+#logs{
+    font-family: "Monaco", Monospace;
+    font-size: 15px;
+}
+
+.date{
+    font-weight: bold;
+}
+
+.logsubhead{
+    font-style: italic;
+}
+
+.headimg1{
+    position: fixed;
+    left: 50%;
+    height: 300px;
+    max-height: 30%;
+    transform: translate(-50%, 0%);
+/*    padding: 10px;*/
+}
+
+.headimg{
+    left: 50%;
+/*    height: 300px;*/
+    max-height: 30%;
+    padding-top: 10px;
+    max-width: 300px;
+}
+
+.information{
+    position: fixed;
+    bottom: 0%;
+    left: 50%;
+    max-height: 30%;
+    height: 25%;
+    text-align: center;
+    transform: translate(-50%, 0%);
+}
+
+.year{
+    position: fixed;
+    bottom: 0%;
+    left: 50%;
+    text-align: center;
+    transform: translate(-50%, 0%);
+}
+
+.year2{
+    bottom: 0%;
+    left: 50%;
+    text-align: center;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+a:hover{
+    color: blue;
+}
+
+table, th, td {
+    width: 100%;
+    font-size: 18px;
+    border:1px solid black;
+    margin-top: 10px;
+    max-width: 300px;
+}
+
+.centerbody{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 300px;
+    flex-direction: column;
+}
+
+.collection{
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 18px;
+}
+
+.logsphotos{
+    width: 100%;
+}
+
+.logcaption{
+    font-size: 14px;
+    padding: 5px;
+    padding-top: 0px;
+}
+
+ol{
+    margin: 0;
+}
+
+
+
+.text:nth-child(1) { transform: rotate(0deg) translate(100px) rotate(0deg); }
+.text:nth-child(2) { transform: rotate(60deg) translate(100px) rotate(-60deg); }
+.text:nth-child(3) { transform: rotate(120deg) translate(100px) rotate(-120deg); }
+.text:nth-child(4) { transform: rotate(180deg) translate(100px) rotate(-180deg); }
+.text:nth-child(5) { transform: rotate(240deg) translate(100px) rotate(-240deg); }
+.text:nth-child(6) { transform: rotate(300deg) translate(100px) rotate(-300deg); }
+
+
+@media only screen and (max-width: 768px) {
+    .circle-container{
+/*        transform: translate(-35%, -50%);*/
+    }
+}
+
+
+
+
+
+
