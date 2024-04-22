@@ -12,8 +12,10 @@ function updateRotation() {
     texts.forEach((text, index) => {
         // Calculate rotation for each text element
         const rotation = rotationAngle + index * angleIncrement;
-        // Apply rotation transformation
-        text.style.transform = `rotate(${rotation}deg) translate(120px) rotate(-${rotation}deg)`;
+        // Determine translation value based on window height
+        const translation = window.innerHeight < 700 ? '100px' : '120px';
+        // Apply rotation and translation transformations
+        text.style.transform = `rotate(${rotation}deg) translate(${translation}) rotate(-${rotation}deg)`;
     });
 }
 

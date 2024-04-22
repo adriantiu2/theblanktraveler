@@ -50,9 +50,8 @@ body, html {
     border-radius: 50px;
 }
 
-#shop{
+/*#shop{
     font-family: "Apple chancery", Cursive;
-/*    font-size: 23px;*/
     font-weight: bold;
 }
 
@@ -70,7 +69,7 @@ body, html {
 #logs{
     font-family: "Monaco", Monospace;
     font-size: 15px;
-}
+}*/
 
 .date{
     font-weight: bold;
@@ -185,6 +184,9 @@ ol{
     }
 }
 
+#archive{
+    font-weight: normal;
+}
 
 
 
