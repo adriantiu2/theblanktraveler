@@ -130,8 +130,15 @@ a:hover{
     color: blue;
 }
 
-table, th, td {
+table, th{
     width: 100%;
+    font-size: 18px;
+    border:1px solid black;
+    margin-top: 10px;
+    max-width: 300px;
+}
+
+td {
     font-size: 18px;
     border:1px solid black;
     margin-top: 10px;
