@@ -169,11 +169,26 @@ td {
 .logcaption{
     font-size: 14px;
     padding: 5px;
-    padding-top: 0px;
+    /*padding-top: 0px;*/
 }
 
 ol{
     margin: 0;
+}
+
+
+/*COMMENTS STYLING*/
+
+#reactions-promotion.reactions-refresh, #reactions.reactions-refresh{
+    display: none !important;
+}
+
+#disqus_thread{
+    width: 300px !important;
+}
+
+.disqus-footer__wrapper--refresh{
+    display: none;
 }
 
 
